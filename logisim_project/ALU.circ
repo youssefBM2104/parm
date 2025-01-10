@@ -1229,6 +1229,10 @@
       <a name="label" val="op"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(310,100)" name="Tunnel">
+      <a name="label" val="A"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(310,1430)" name="Tunnel">
       <a name="label" val="C_LSL"/>
     </comp>
@@ -1253,16 +1257,12 @@
       <a name="value" val="0x7fffffff"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(350,160)" name="Tunnel">
+    <comp lib="0" loc="(350,200)" name="Tunnel">
       <a name="label" val="B"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(360,30)" name="Constant">
       <a name="value" val="0x7fffffff"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(360,30)" name="Tunnel">
-      <a name="label" val="A"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(370,1240)" name="Tunnel">
@@ -2124,10 +2124,10 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Note: for ROR, C = N"/>
     </comp>
-    <comp lib="6" loc="(923,119)" name="Text">
+    <comp lib="6" loc="(920,115)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="CMP might be fucked"/>
+      <a name="text" val="CMP might be wrong"/>
     </comp>
     <wire from="(100,1570)" to="(110,1570)"/>
     <wire from="(100,1790)" to="(120,1790)"/>
