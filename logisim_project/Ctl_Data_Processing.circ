@@ -174,11 +174,11 @@ end TCL_Generic;
       <circ-anchor facing="east" x="270" y="60"/>
       <circ-port dir="in" pin="210,130" x="50" y="60"/>
       <circ-port dir="in" pin="470,70" x="50" y="80"/>
-      <circ-port dir="out" pin="530,150" x="270" y="100"/>
-      <circ-port dir="out" pin="530,210" x="270" y="80"/>
-      <circ-port dir="out" pin="530,270" x="270" y="60"/>
-      <circ-port dir="out" pin="530,330" x="270" y="140"/>
-      <circ-port dir="out" pin="530,90" x="270" y="120"/>
+      <circ-port dir="out" pin="550,150" x="270" y="100"/>
+      <circ-port dir="out" pin="550,210" x="270" y="80"/>
+      <circ-port dir="out" pin="550,270" x="270" y="60"/>
+      <circ-port dir="out" pin="550,330" x="270" y="140"/>
+      <circ-port dir="out" pin="550,90" x="270" y="120"/>
     </appear>
     <comp lib="0" loc="(100,290)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -452,44 +452,44 @@ end TCL_Generic;
       <a name="facing" val="west"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(530,150)" name="Pin">
+    <comp lib="0" loc="(540,630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="bit2"/>
+    </comp>
+    <comp lib="0" loc="(550,150)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Rn"/>
       <a name="output" val="true"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(530,210)" name="Pin">
+    <comp lib="0" loc="(550,210)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Rm"/>
       <a name="output" val="true"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(530,270)" name="Pin">
+    <comp lib="0" loc="(550,270)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ALU_Opcode"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(530,330)" name="Pin">
+    <comp lib="0" loc="(550,330)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Flags_Update_Mask"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(530,90)" name="Pin">
+    <comp lib="0" loc="(550,90)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Rd"/>
       <a name="output" val="true"/>
       <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(540,630)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="bit2"/>
     </comp>
     <comp lib="0" loc="(560,470)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -888,6 +888,11 @@ end TCL_Generic;
     <wire from="(510,230)" to="(510,240)"/>
     <wire from="(510,290)" to="(510,300)"/>
     <wire from="(510,350)" to="(510,360)"/>
+    <wire from="(530,150)" to="(550,150)"/>
+    <wire from="(530,210)" to="(550,210)"/>
+    <wire from="(530,270)" to="(550,270)"/>
+    <wire from="(530,330)" to="(550,330)"/>
+    <wire from="(530,90)" to="(550,90)"/>
     <wire from="(540,600)" to="(540,630)"/>
     <wire from="(540,600)" to="(570,600)"/>
     <wire from="(560,450)" to="(560,470)"/>
