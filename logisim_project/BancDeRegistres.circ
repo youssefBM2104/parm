@@ -676,17 +676,17 @@
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Ecrite DataIn dans le registre choisi"/>
     </comp>
-    <comp lib="6" loc="(161,811)" name="Text">
+    <comp lib="6" loc="(160,810)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Lecture d'un registre donnée dans BOut"/>
+    </comp>
+    <comp lib="6" loc="(165,395)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Lecture d'un registre donnée dans AOut"/>
     </comp>
     <comp lib="6" loc="(1665,415)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Activation du WE du registre choisi"/>
-    </comp>
-    <comp lib="6" loc="(167,396)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="Lecture d'un registre donnée dans AOut"/>
     </comp>
     <comp lib="6" loc="(1985,505)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
