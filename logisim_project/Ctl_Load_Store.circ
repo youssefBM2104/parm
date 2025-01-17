@@ -157,10 +157,10 @@ end type_architecture;
       <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="140">Reset</text>
       <text dominant-baseline="central" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="159" y="170">Load_Store</text>
       <circ-anchor facing="east" x="270" y="60"/>
-      <circ-port dir="in" pin="200,170" x="50" y="150"/>
+      <circ-port dir="in" pin="200,170" x="50" y="120"/>
       <circ-port dir="in" pin="200,250" x="50" y="140"/>
       <circ-port dir="in" pin="200,360" x="50" y="100"/>
-      <circ-port dir="in" pin="200,70" x="50" y="130"/>
+      <circ-port dir="in" pin="200,70" x="50" y="60"/>
       <circ-port dir="in" pin="440,60" x="50" y="80"/>
       <circ-port dir="out" pin="670,400" x="270" y="80"/>
       <circ-port dir="out" pin="720,120" x="270" y="100"/>
@@ -218,9 +218,6 @@ end type_architecture;
       <a name="facing" val="north"/>
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(1170,870)" name="Tunnel">
-      <a name="label" val="load_inter"/>
-    </comp>
     <comp lib="0" loc="(1190,150)" name="Tunnel">
       <a name="label" val="store_out"/>
     </comp>
@@ -252,6 +249,9 @@ end type_architecture;
     </comp>
     <comp lib="0" loc="(1360,820)" name="Tunnel">
       <a name="label" val="pc_hold_inter"/>
+    </comp>
+    <comp lib="0" loc="(1370,860)" name="Tunnel">
+      <a name="label" val="load_inter"/>
     </comp>
     <comp lib="0" loc="(160,760)" name="Splitter">
       <a name="bit1" val="0"/>
@@ -450,6 +450,9 @@ end type_architecture;
     <comp lib="1" loc="(1350,820)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(1350,860)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(200,970)" name="AND Gate">
       <a name="facing" val="north"/>
       <a name="size" val="30"/>
@@ -465,23 +468,23 @@ end type_architecture;
       <a name="appearance" val="logisim_evolution"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="8" loc="(162,36)" name="Text">
+    <comp lib="8" loc="(160,35)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="INPUT"/>
     </comp>
-    <comp lib="8" loc="(577,675)" name="Text">
+    <comp lib="8" loc="(575,675)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Ram_addr calculator"/>
     </comp>
-    <comp lib="8" loc="(676,255)" name="Text">
+    <comp lib="8" loc="(675,255)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Delay load and hold PC for 1 cycle for the RAM to send out requested data "/>
     </comp>
-    <comp lib="8" loc="(682,42)" name="Text">
+    <comp lib="8" loc="(680,40)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OUTPUT"/>
     </comp>
-    <comp lib="8" loc="(99,670)" name="Text">
+    <comp lib="8" loc="(95,670)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Instruction decoder"/>
     </comp>
@@ -511,15 +514,19 @@ end type_architecture;
     <wire from="(1140,190)" to="(1190,190)"/>
     <wire from="(1140,270)" to="(1190,270)"/>
     <wire from="(1140,830)" to="(1170,830)"/>
-    <wire from="(1140,870)" to="(1170,870)"/>
+    <wire from="(1140,870)" to="(1320,870)"/>
     <wire from="(1150,390)" to="(1200,390)"/>
     <wire from="(1160,520)" to="(1200,520)"/>
     <wire from="(1170,800)" to="(1170,830)"/>
     <wire from="(1170,830)" to="(1320,830)"/>
     <wire from="(120,930)" to="(180,930)"/>
-    <wire from="(1290,810)" to="(1320,810)"/>
+    <wire from="(1290,810)" to="(1300,810)"/>
     <wire from="(130,760)" to="(160,760)"/>
+    <wire from="(1300,810)" to="(1300,850)"/>
+    <wire from="(1300,810)" to="(1320,810)"/>
+    <wire from="(1300,850)" to="(1320,850)"/>
     <wire from="(1350,820)" to="(1360,820)"/>
+    <wire from="(1350,860)" to="(1370,860)"/>
     <wire from="(180,680)" to="(180,710)"/>
     <wire from="(180,680)" to="(220,680)"/>
     <wire from="(180,730)" to="(220,730)"/>
