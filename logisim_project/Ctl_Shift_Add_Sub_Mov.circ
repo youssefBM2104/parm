@@ -1073,8 +1073,6 @@ end type_architecture;
     <comp lib="1" loc="(1430,530)" name="AND Gate">
       <a name="inputs" val="4"/>
       <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
     </comp>
     <comp lib="1" loc="(1620,110)" name="AND Gate">
       <a name="facing" val="north"/>
@@ -1182,15 +1180,15 @@ end type_architecture;
     <comp lib="3" loc="(1780,790)" name="Negator">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(260,1047)" name="Text">
+    <comp lib="8" loc="(260,1045)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Note 3: Imm32_Enable forces the use of the immediate for Rm register"/>
     </comp>
-    <comp lib="8" loc="(315,1002)" name="Text">
+    <comp lib="8" loc="(315,1000)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Note: ALU uses Rn register for shifts. Use Rn instead of Rm for shifts (immediate) here too"/>
     </comp>
-    <comp lib="8" loc="(325,1017)" name="Text">
+    <comp lib="8" loc="(325,1015)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Note 2: MOV uses RSB ALU opcode with Imm8 reversed so that it is copied to output register"/>
     </comp>
@@ -1198,11 +1196,11 @@ end type_architecture;
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Pull output low on Enable = 0"/>
     </comp>
-    <comp lib="8" loc="(689,116)" name="Text">
+    <comp lib="8" loc="(685,115)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="MUX for every output"/>
     </comp>
-    <comp lib="8" loc="(825,407)" name="Text">
+    <comp lib="8" loc="(825,405)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="only ADD and SUB use Rm"/>
     </comp>
@@ -1215,14 +1213,14 @@ end type_architecture;
       <a name="text" val="ALU will use Imm32 instead of Rm"/>
     </comp>
     <wire from="(120,200)" to="(240,200)"/>
-    <wire from="(1250,540)" to="(1370,540)"/>
+    <wire from="(1250,540)" to="(1380,540)"/>
     <wire from="(1280,320)" to="(1300,320)"/>
     <wire from="(1280,360)" to="(1300,360)"/>
     <wire from="(1320,40)" to="(1360,40)"/>
     <wire from="(1320,60)" to="(1360,60)"/>
     <wire from="(1330,580)" to="(1340,580)"/>
     <wire from="(1340,300)" to="(1350,300)"/>
-    <wire from="(1340,520)" to="(1370,520)"/>
+    <wire from="(1340,520)" to="(1380,520)"/>
     <wire from="(1340,550)" to="(1340,580)"/>
     <wire from="(1340,550)" to="(1380,550)"/>
     <wire from="(1350,460)" to="(1360,460)"/>
