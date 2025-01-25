@@ -172,10 +172,6 @@ end type_architecture;
       <a name="facing" val="east"/>
       <a name="label" val="clock"/>
     </comp>
-    <comp lib="0" loc="(1040,350)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="enable"/>
-    </comp>
     <comp lib="0" loc="(1050,200)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="load_inter"/>
@@ -184,39 +180,47 @@ end type_architecture;
       <a name="facing" val="east"/>
       <a name="label" val="pc_hold_inter"/>
     </comp>
-    <comp lib="0" loc="(1050,400)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="rmd"/>
-      <a name="width" val="3"/>
-    </comp>
     <comp lib="0" loc="(1060,160)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="store"/>
     </comp>
-    <comp lib="0" loc="(1060,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="enable"/>
+    <comp lib="0" loc="(1080,360)" name="Ground">
+      <a name="facing" val="west"/>
+      <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(1070,530)" name="Tunnel">
+    <comp lib="0" loc="(1080,400)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ram_addr"/>
-      <a name="width" val="32"/>
+      <a name="label" val="rmd"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(1090,110)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="enable"/>
     </comp>
-    <comp lib="0" loc="(1100,350)" name="Bit Extender">
-      <a name="in_width" val="1"/>
-      <a name="out_width" val="3"/>
+    <comp lib="0" loc="(1100,490)" name="Ground">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1110,480)" name="Bit Extender">
-      <a name="in_width" val="1"/>
-      <a name="out_width" val="32"/>
+    <comp lib="0" loc="(1100,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ram_addr"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1110,890)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(1120,420)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="enable"/>
+    </comp>
+    <comp lib="0" loc="(1140,550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="enable"/>
+    </comp>
+    <comp lib="0" loc="(1180,390)" name="Tunnel">
+      <a name="label" val="rmd_out"/>
+      <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(1190,150)" name="Tunnel">
       <a name="label" val="store_out"/>
@@ -229,10 +233,6 @@ end type_architecture;
     </comp>
     <comp lib="0" loc="(120,930)" name="Power">
       <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(1200,390)" name="Tunnel">
-      <a name="label" val="rmd_out"/>
-      <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(1200,520)" name="Tunnel">
       <a name="label" val="ram_addr_out"/>
@@ -351,8 +351,8 @@ end type_architecture;
     </comp>
     <comp lib="0" loc="(600,820)" name="Constant">
       <a name="facing" val="north"/>
-      <a name="value" val="0x2"/>
-      <a name="width" val="5"/>
+      <a name="value" val="0x4"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(640,720)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -436,14 +436,6 @@ end type_architecture;
     <comp lib="1" loc="(1140,270)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(1150,390)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="width" val="3"/>
-    </comp>
-    <comp lib="1" loc="(1160,520)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="1" loc="(1290,810)" name="NOT Gate">
       <a name="size" val="20"/>
     </comp>
@@ -457,8 +449,15 @@ end type_architecture;
       <a name="facing" val="north"/>
       <a name="size" val="30"/>
     </comp>
+    <comp lib="2" loc="(1140,390)" name="Multiplexer">
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="2" loc="(1160,520)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="2" loc="(180,930)" name="Demultiplexer"/>
-    <comp lib="3" loc="(670,790)" name="Shifter">
+    <comp lib="3" loc="(670,790)" name="Multiplier">
+      <a name="mode" val="twosComplement"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="3" loc="(760,740)" name="Adder">
@@ -476,6 +475,10 @@ end type_architecture;
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Ram_addr calculator"/>
     </comp>
+    <comp lib="8" loc="(650,865)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="THIS IS SIGNED MIGHT NEED TO BE CHANGED"/>
+    </comp>
     <comp lib="8" loc="(675,255)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Delay load and hold PC for 1 cycle for the RAM to send out requested data "/>
@@ -489,33 +492,31 @@ end type_architecture;
       <a name="text" val="Instruction decoder"/>
     </comp>
     <wire from="(1030,870)" to="(1080,870)"/>
-    <wire from="(1040,350)" to="(1060,350)"/>
     <wire from="(1050,200)" to="(1110,200)"/>
     <wire from="(1050,280)" to="(1110,280)"/>
-    <wire from="(1050,400)" to="(1120,400)"/>
     <wire from="(1050,830)" to="(1080,830)"/>
     <wire from="(1060,160)" to="(1110,160)"/>
-    <wire from="(1060,480)" to="(1070,480)"/>
-    <wire from="(1070,530)" to="(1130,530)"/>
+    <wire from="(1080,360)" to="(1080,380)"/>
+    <wire from="(1080,380)" to="(1110,380)"/>
+    <wire from="(1080,400)" to="(1110,400)"/>
     <wire from="(1090,110)" to="(1090,140)"/>
     <wire from="(1090,140)" to="(1090,180)"/>
     <wire from="(1090,140)" to="(1110,140)"/>
     <wire from="(1090,180)" to="(1090,260)"/>
     <wire from="(1090,180)" to="(1110,180)"/>
     <wire from="(1090,260)" to="(1110,260)"/>
-    <wire from="(1100,350)" to="(1110,350)"/>
-    <wire from="(1110,350)" to="(1110,380)"/>
-    <wire from="(1110,380)" to="(1120,380)"/>
-    <wire from="(1110,480)" to="(1120,480)"/>
+    <wire from="(1100,490)" to="(1100,510)"/>
+    <wire from="(1100,510)" to="(1130,510)"/>
+    <wire from="(1100,530)" to="(1130,530)"/>
     <wire from="(1110,880)" to="(1110,890)"/>
-    <wire from="(1120,480)" to="(1120,510)"/>
-    <wire from="(1120,510)" to="(1130,510)"/>
+    <wire from="(1120,410)" to="(1120,420)"/>
     <wire from="(1140,150)" to="(1190,150)"/>
     <wire from="(1140,190)" to="(1190,190)"/>
     <wire from="(1140,270)" to="(1190,270)"/>
+    <wire from="(1140,390)" to="(1180,390)"/>
+    <wire from="(1140,540)" to="(1140,550)"/>
     <wire from="(1140,830)" to="(1170,830)"/>
     <wire from="(1140,870)" to="(1320,870)"/>
-    <wire from="(1150,390)" to="(1200,390)"/>
     <wire from="(1160,520)" to="(1200,520)"/>
     <wire from="(1170,800)" to="(1170,830)"/>
     <wire from="(1170,830)" to="(1320,830)"/>

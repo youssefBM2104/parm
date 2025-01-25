@@ -386,7 +386,7 @@ end type_architecture;
       <a name="output" val="true"/>
       <a name="width" val="11"/>
     </comp>
-    <comp lib="0" loc="(710,870)" name="Ground">
+    <comp lib="0" loc="(710,870)" name="Power">
       <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(720,650)" name="Pin">
