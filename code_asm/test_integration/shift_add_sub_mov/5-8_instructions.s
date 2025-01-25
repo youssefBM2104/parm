@@ -7,7 +7,7 @@ subs r4, r3, r2
 @r4 value should be 85, 55
 
 adds r5, r2, #5
-@r4 value should be 175, AF
+@r5 value should be 175, AF
 
 movs r6, #179
 @r6 value should be 179, B3
