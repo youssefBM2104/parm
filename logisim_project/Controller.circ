@@ -4,7 +4,7 @@
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="facing" val="south"/>
+      <a name="facing" val="west"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="1"/>
     </tool>
@@ -18,7 +18,7 @@
       <a name="radix" val="10unsigned"/>
     </tool>
     <tool name="Tunnel">
-      <a name="facing" val="east"/>
+      <a name="facing" val="north"/>
     </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
@@ -113,13 +113,13 @@ end type_architecture;
     </tool>
   </lib>
   <lib desc="#BFH-Praktika" name="9"/>
-  <lib desc="file#Ctl_Data_Processing.circ" name="10"/>
+  <lib desc="file#Ctl_Load_Store.circ" name="10"/>
   <lib desc="file#Ctl_Conditional.circ" name="11"/>
-  <lib desc="file#Ctl_SP_Address.circ" name="12"/>
-  <lib desc="file#Ctl_Shift_Add_Sub_Mov.circ" name="13"/>
-  <lib desc="file#Ctl_Flags_APSR.circ" name="14"/>
-  <lib desc="file#Ctl_Opcode_Decoder.circ" name="15"/>
-  <lib desc="file#Ctl_Load_Store.circ" name="16"/>
+  <lib desc="file#Ctl_Shift_Add_Sub_Mov.circ" name="12"/>
+  <lib desc="file#Ctl_Flags_APSR.circ" name="13"/>
+  <lib desc="file#Ctl_Opcode_Decoder.circ" name="14"/>
+  <lib desc="file#Ctl_Data_Processing.circ" name="15"/>
+  <lib desc="file#Ctl_SP_Address.circ" name="16"/>
   <main name="Controller"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -417,13 +417,13 @@ end type_architecture;
       <a name="size" val="30"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="10" loc="(920,390)" name="Data_Processing"/>
+    <comp lib="10" loc="(920,690)" name="Load_Store"/>
     <comp lib="11" loc="(900,1090)" name="Conditional"/>
-    <comp lib="12" loc="(990,880)" name="SP_Address"/>
-    <comp lib="13" loc="(920,210)" name="Shift_Add_Sub_Mov"/>
-    <comp lib="14" loc="(920,530)" name="Flags_APSR"/>
-    <comp lib="15" loc="(520,240)" name="Opcode_Decoder"/>
-    <comp lib="16" loc="(920,690)" name="Load_Store"/>
+    <comp lib="12" loc="(920,210)" name="Shift_Add_Sub_Mov"/>
+    <comp lib="13" loc="(920,530)" name="Flags_APSR"/>
+    <comp lib="14" loc="(520,240)" name="Opcode_Decoder"/>
+    <comp lib="15" loc="(920,390)" name="Data_Processing"/>
+    <comp lib="16" loc="(990,880)" name="SP_Address"/>
     <comp lib="2" loc="(1270,70)" name="Multiplexer"/>
     <comp lib="3" loc="(1000,1080)" name="Adder">
       <a name="width" val="16"/>
@@ -573,7 +573,8 @@ end type_architecture;
     <wire from="(430,850)" to="(1310,850)"/>
     <wire from="(430,850)" to="(430,920)"/>
     <wire from="(430,920)" to="(700,920)"/>
-    <wire from="(510,1160)" to="(700,1160)"/>
+    <wire from="(510,1130)" to="(510,1160)"/>
+    <wire from="(510,1130)" to="(700,1130)"/>
     <wire from="(510,1170)" to="(570,1170)"/>
     <wire from="(510,1180)" to="(580,1180)"/>
     <wire from="(510,1190)" to="(700,1190)"/>
@@ -588,8 +589,8 @@ end type_architecture;
     <wire from="(550,900)" to="(700,900)"/>
     <wire from="(570,100)" to="(1110,100)"/>
     <wire from="(570,100)" to="(570,170)"/>
-    <wire from="(570,1130)" to="(570,1170)"/>
-    <wire from="(570,1130)" to="(700,1130)"/>
+    <wire from="(570,1160)" to="(570,1170)"/>
+    <wire from="(570,1160)" to="(700,1160)"/>
     <wire from="(570,170)" to="(570,240)"/>
     <wire from="(570,170)" to="(700,170)"/>
     <wire from="(570,280)" to="(570,710)"/>
