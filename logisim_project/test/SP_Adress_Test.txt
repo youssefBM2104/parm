@@ -1,0 +1,6 @@
+Stack_Pointer[32] Instruction[16] Enable[1] New_Stack_Pointer[32] Write_Enable[1] 
+
+
+0x10000001 0xB02A 1 0x100000a9 1
+0x10000001 0xB0AA 1 0xfffff59 1
+0x10000001 0xB0AA 0 0 0
