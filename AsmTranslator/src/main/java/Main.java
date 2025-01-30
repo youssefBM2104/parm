@@ -1,6 +1,8 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -131,9 +133,36 @@ public class Main {
             result += " ";
             counter++;
         }
-        System.out.println(result);
+
+        writeFile(result,args[0]);
+
     }
 
+    public static void writeFile(String content, String fileName){
+
+        String binFile = getFileNameWithoutExtension(fileName)+".bin";
+
+        try (FileWriter writer = new FileWriter(System.getProperty("user.dir")+"/MyBin/"+binFile)) {
+            writer.write(content);
+            System.out.println("File written successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static String getFileNameWithoutExtension(String filePath) {
+        if (filePath == null || filePath.isEmpty()) {
+            return filePath; // Return the input if it's null or empty
+        }
+
+        // Use Paths to extract the filename (with extension)
+        Path path = Paths.get(filePath);
+        String fileName = path.getFileName().toString(); // Gets the filename (e.g., "example.txt")
+
+        // Remove the extension
+        int lastDotIndex = fileName.lastIndexOf('.'); // Find the last occurrence of '.'
+
+        return fileName.substring(0, lastDotIndex); // Return the substring before the last '.'
+    }
     public static String processDataProc(List<String> wordList) {
         String regNumBinary = toBinaryString(extractNumber(wordList.getFirst()), 3);
         return toBinaryString(extractNumber(wordList.get(1)), 3) + regNumBinary;
