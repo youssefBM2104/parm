@@ -12,6 +12,13 @@ import java.util.regex.Pattern;
 
 public class Main {
 
+    public static String removeLeadingTab(String input) {
+        if (input != null && input.startsWith("\t")) {
+            return input.substring(1); // Remove the first character (tab)
+        }
+        return input; // Return the original string if no tab is found at the beginning
+    }
+
     public static void fillList(String filename, List<List<String>> wordLists, Map<String, Integer> etiquettes) {
 
         int instructionCounter = 1;
@@ -21,8 +28,9 @@ public class Main {
             Pattern pattern = Pattern.compile("\\[[^\\]]+\\]|\\S+");
 
             for (String line : lines) {
+                line = removeLeadingTab(line);
                 // Skip lines starting with '@'
-                if (line.startsWith("@")) {
+                if ( line.equals("run:") ||line.startsWith("@")|| line.startsWith(".") && !line.endsWith(":")) {
                     continue;
                 }
 
@@ -42,7 +50,9 @@ public class Main {
 
                 }
 
-                wordLists.add(words);
+                if (words.isEmpty()||!words.getFirst().equals("push")&&!words.getFirst().equals("pop")){
+                    wordLists.add(words);
+                }
                 if (!words.isEmpty()) {
                     instructionCounter++;
                 }
@@ -59,7 +69,7 @@ public class Main {
             return;
         }
 
-        final String filename = System.getProperty("user.dir") + "/code_asm/test_integration/" + args[0];
+        final String filename = System.getProperty("user.dir")  +"/"+ args[0];
         Map<String, Integer> etiquettes = new HashMap<>();
         List<List<String>> wordLists = new ArrayList<>();
 
@@ -67,6 +77,7 @@ public class Main {
 
 
         int counter = 1;
+
 
         String result = "v2.0 raw\n";
         for (List<String> wordList : wordLists) {
@@ -109,8 +120,8 @@ public class Main {
                 }
             } else {
                 if (instruction.equals(Instruction.SUB) || instruction.equals(Instruction.ADD)) {
-                    wordList.removeFirst();
-                    String regNumBinary = toBinaryString(extractNumber(wordList.getFirst())/4, 7);
+                    //wordList.removeFirst();
+                    String regNumBinary = toBinaryString(extractNumber(wordList.getLast())/4, 7);
                     currentBinary += regNumBinary;
                 }
                 else if (instruction.isDataProc()) {
